@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Project outputs
+output.json
+report.md
+report.json
+
+# IDEs
+.vscode/
+.idea/
+
+# Temp scripts
+list_models.py

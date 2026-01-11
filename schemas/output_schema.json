@@ -1,0 +1,19 @@
+{
+    "brand_health_score": 62,
+    "executive_summary": "...",
+    "sentiment_overview": {
+        "average_score": -0.12,
+        "negative_ratio": 0.38
+    },
+    "top_issues": [
+        "kargo",
+        "müşteri hizmetleri"
+    ],
+    "strengths": [
+        "ürün kalitesi"
+    ],
+    "recommendations": [
+        "kargo süreçlerini iyileştirin",
+        "müşteri destek süresini kısaltın"
+    ]
+}

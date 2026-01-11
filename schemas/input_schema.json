@@ -1,0 +1,96 @@
+{
+  "brand": "X Marka",
+  "company_goal": "Müşteri bağlılığını artırmak ve operasyonel verimliliği iyileştirmek",
+  "comments": [
+    {
+      "id": 1,
+      "text": "Ürün kalitesi muazzam, gerçekten bayıldım! Ancak kargo süreci biraz sancılıydı.",
+      "platform": "instagram",
+      "date": "2026-01-01"
+    },
+    {
+      "id": 2,
+      "text": "Fiyatlar piyasaya göre biraz yüksek kalmış, indirim bekliyoruz.",
+      "platform": "twitter",
+      "date": "2026-01-02"
+    },
+    {
+      "id": 3,
+      "text": "Müşteri hizmetleri çok ilgisizdi, soruma cevap alamadım resmen.",
+      "platform": "sikayetvar",
+      "date": "2026-01-03"
+    },
+    {
+      "id": 4,
+      "text": "Paketleme çok özenliydi, kırılacak diye korkuyordum ama sapasağlam geldi. Teşekkürler!",
+      "platform": "trendyol",
+      "date": "2026-01-03"
+    },
+    {
+      "id": 5,
+      "text": "Bu fiyata bu performans inanılmaz. Kesinlikle tavsiye ederim.",
+      "platform": "hepsiburada",
+      "date": "2026-01-04"
+    },
+    {
+      "id": 6,
+      "text": "Kargo şirketi paketi kapıya atıp gitmiş, rezalet bir hizmet.",
+      "platform": "sikayetvar",
+      "date": "2026-01-05"
+    },
+    {
+      "id": 7,
+      "text": "Yeni sezon ürünlerin tasarımları harika olmuş, tasarımcıyı tebrik ederim.",
+      "platform": "instagram",
+      "date": "2026-01-05"
+    },
+    {
+      "id": 8,
+      "text": "Mobil uygulama sürekli hata veriyor, siparişimi tamamlayamadım bir türlü.",
+      "platform": "playstore",
+      "date": "2026-01-06"
+    },
+    {
+      "id": 9,
+      "text": "İade sürecinde hiç zorluk çıkarmadılar, güvenilir firma.",
+      "platform": "eksisozluk",
+      "date": "2026-01-07"
+    },
+    {
+      "id": 10,
+      "text": "Son güncelleme ile uygulama çok yavaşladı, acil düzeltilmesi lazım.",
+      "platform": "appstore",
+      "date": "2026-01-07"
+    },
+    {
+      "id": 11,
+      "text": "Ürün göründüğü gibi gelmedi, rengi çok soluk.",
+      "platform": "trendyol",
+      "date": "2026-01-08"
+    },
+    {
+      "id": 12,
+      "text": "Yıllardır kullanıyorum, kalitesinden hiç ödün vermedi.",
+      "platform": "twitter",
+      "date": "2026-01-08"
+    },
+    {
+      "id": 13,
+      "text": "Kargo beklediğimden çok daha hızlı geldi, sürpriz oldu :)",
+      "platform": "instagram",
+      "date": "2026-01-09"
+    },
+    {
+      "id": 14,
+      "text": "Müşteri temsilcisi Ayşe Hanım çok yardımcı oldu, teşekkürler.",
+      "platform": "telefon",
+      "date": "2026-01-09"
+    },
+    {
+      "id": 15,
+      "text": "Stoklar hemen tükeniyor, daha fazla ürün getirmelisiniz.",
+      "platform": "instagram",
+      "date": "2026-01-10"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+gemini:
+  api_key: "" # Loaded from .env
+  model_name: "gemini-2.0-flash"
+
+sentiment:
+  model_name: "savasy/bert-base-turkish-sentiment-cased"
+  threshold: 0.2
+
+reporting:
+  negative_ratio_threshold: 0.3
