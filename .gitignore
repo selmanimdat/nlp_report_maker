@@ -12,6 +12,8 @@ venv/
 output.json
 report.md
 report.json
+*_report.json
+*_latest.json
 
 # IDEs
 .vscode/
