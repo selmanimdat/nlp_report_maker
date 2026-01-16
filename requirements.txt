@@ -4,3 +4,6 @@ torch
 pydantic
 pyyaml
 python-dotenv
+streamlit
+fpdf
+markdown
