@@ -1,11 +1,11 @@
-from services.gemini_client import GeminiClient
+from services.llm_service import LLMService
 from config.prompts import REPORT_GENERATION_PROMPT
 import json
 import re
 
 class ReportPipeline:
     def __init__(self):
-        self.gemini_client = GeminiClient()
+        self.llm_service = LLMService()
 
     def generate_report(self, brand, company_goal, stats):
         # Format top topics for the prompt
@@ -19,7 +19,7 @@ class ReportPipeline:
             top_topics=top_topics_str
         )
         
-        response_text = self.gemini_client.generate_content(prompt)
+        response_text = self.llm_service.generate_content(prompt)
         
         # Return raw markdown
         return {"report_markdown": response_text}

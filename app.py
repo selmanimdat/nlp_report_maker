@@ -13,13 +13,42 @@ from pipelines.report_pipeline import ReportPipeline
 from fpdf import FPDF
 import re
 
-# ... (logging setup is same) ...
+# Configure Logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+st.set_page_config(
+    page_title="Sentiment Intelligence System",
+    page_icon="🤖",
+    layout="wide"
+)
 
 # --- PDF Generation Utility ---
+
+def normalize_turkish_chars(text):
+    """
+    Replaces Turkish equivalents with Latin/ASCII characters for FPDF compatibility.
+    """
+    replacements = {
+        'ğ': 'g', 'Ğ': 'G',
+        'ü': 'u', 'Ü': 'U',
+        'ş': 's', 'Ş': 'S',
+        'ı': 'i', 'İ': 'I',
+        'ö': 'o', 'Ö': 'O',
+        'ç': 'c', 'Ç': 'C',
+        'â': 'a', 'î': 'i', 'û': 'u'
+    }
+    for k, v in replacements.items():
+        text = text.replace(k, v)
+    
+    # Fallback for any other complex chars
+    return text.encode('latin-1', 'replace').decode('latin-1')
+
 class PDF(FPDF):
     def header(self):
         self.set_font('Arial', 'B', 15)
-        self.cell(0, 10, 'Sentiment Intelligence Report', 0, 1, 'C')
+        title = normalize_turkish_chars('Sentiment Intelligence Report')
+        self.cell(0, 10, title, 0, 1, 'C')
         self.ln(10)
 
     def footer(self):
@@ -44,25 +73,27 @@ def create_pdf(report_content, stats):
     pdf.ln(5)
     
     # 2. Report Content
-    # Simple markdown stripping for cleaner text
     pdf.set_font('Arial', '', 11)
     
-    # Remove #, *, etc for cleaner plain text
     lines = report_content.split('\n')
     for line in lines:
         clean_line = line.strip()
+        
+        # Normalize for PDF encoding
+        safe_line = normalize_turkish_chars(clean_line)
+        
         # Header handling
         if clean_line.startswith('#'):
-            clean_line = clean_line.lstrip('#').strip()
+            safe_line = safe_line.lstrip('#').strip()
             pdf.set_font('Arial', 'B', 12)
             pdf.ln(2)
-            pdf.multi_cell(0, 7, clean_line)
+            pdf.multi_cell(0, 7, safe_line)
             pdf.set_font('Arial', '', 11)
         else:
             # Bold cleanup
-            clean_line = clean_line.replace('**', '').replace('__', '')
-            if clean_line:
-                pdf.multi_cell(0, 6, clean_line)
+            safe_line = safe_line.replace('**', '').replace('__', '')
+            if safe_line:
+                pdf.multi_cell(0, 6, safe_line)
                 
     pdf_file = tempfile.mktemp(suffix=".pdf")
     pdf.output(pdf_file, 'F')
